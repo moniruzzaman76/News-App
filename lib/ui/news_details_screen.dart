@@ -73,15 +73,31 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                 Text(widget.articleModel.title ?? ""),
                 const SizedBox(height: 10,),
                 Text(widget.articleModel.description ?? ""),
-                const SizedBox(height: 16,),
+                const SizedBox(height: 25,),
                 Center(
-                  child: ElevatedButton(
-                      onPressed: () async {
-                        final Uri _url = Uri.parse(widget.articleModel.url.toString());
-                        if (!await launchUrl(_url)) {
-                          throw Exception('Could not launch $_url');
-                        }
-                      }, child: const Text('Read more...')
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          elevation: .1,
+                          backgroundColor: Colors.white54,
+                          padding: const EdgeInsets.all(12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)
+                          )
+                        ),
+                          onPressed: () async {
+                            final Uri _url = Uri.parse(widget.articleModel.url.toString());
+                            if (!await launchUrl(_url)) {
+                              throw Exception('Could not launch $_url');
+                            }
+                          }, child: const Text('Read more...',style: TextStyle(
+                        color: Colors.black87,
+                      ),)
+                      ),
+                    ),
                   ),
                 )
               ],

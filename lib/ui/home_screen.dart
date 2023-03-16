@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.orange,
+            backgroundColor: const Color(0xFF485E68),
             centerTitle: true,
             title: const Text('Flutter News App'),
             bottom: const TabBar(

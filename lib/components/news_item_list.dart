@@ -23,7 +23,7 @@ class _NewsItemListState extends State<NewsItemList> {
                     NewsDetailScreen(articleModel: widget.articleModel)));
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical:6),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -46,7 +46,7 @@ class _NewsItemListState extends State<NewsItemList> {
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
                       color: Colors.red,
-                      borderRadius: BorderRadius.circular(6)),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Text(
                     widget.articleModel.source!.name ?? "",
                     style: const TextStyle(
