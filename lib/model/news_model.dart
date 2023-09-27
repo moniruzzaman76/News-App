@@ -8,6 +8,7 @@ class ArticleModel {
   String? publishedAt;
   String? content;
 
+
   ArticleModel(
       {this.source,
         this.author,

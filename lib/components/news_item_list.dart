@@ -46,7 +46,7 @@ class _NewsItemListState extends State<NewsItemList> {
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
                       color: Colors.red,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(11)),
                   child: Text(
                     widget.articleModel.source!.name ?? "",
                     style: const TextStyle(

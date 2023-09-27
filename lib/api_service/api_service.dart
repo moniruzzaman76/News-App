@@ -11,6 +11,7 @@ class ApiService {
     try {
       final response = await get(Uri.parse(allNewsUrl));
       if (response.statusCode == 200) {
+
         Map<String, dynamic>json = jsonDecode(response.body);
         List<dynamic>body = json['articles'];
         List<ArticleModel> articleList = body.map((item) =>

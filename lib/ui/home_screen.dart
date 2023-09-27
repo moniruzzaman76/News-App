@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
               tabs: [
                 Tab(text: "Breaking News",),
                 Tab(text: 'All News',)
+
               ],
             ),
           ),
