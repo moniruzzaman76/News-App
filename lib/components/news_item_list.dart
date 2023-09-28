@@ -40,32 +40,34 @@ class _NewsItemListState extends State<NewsItemList> {
             const SizedBox(
               height: 8,
             ),
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(7),
-                  decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(11)),
-                  child: Text(
-                    widget.articleModel.source!.name ?? "",
+            FittedBox(
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(7),
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(11)),
+                    child: Text(
+                      widget.articleModel.source!.name ?? "",
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "Published : ${widget.articleModel.publishedAt ?? ""}",
                     style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
+                        color: Colors.grey,
+                        fontSize: 12,
                         fontWeight: FontWeight.w600),
                   ),
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "Published : ${widget.articleModel.publishedAt ?? ""}",
-                  style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 8,

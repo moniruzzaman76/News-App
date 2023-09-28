@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../api_service/api_service.dart';
+import '../api_service/url.dart';
 import '../components/news_item_list.dart';
 import '../model/news_model.dart';
 
@@ -19,7 +20,7 @@ class _BreakingNewsState extends State<BreakingNews> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-        future: apiService.getBreakingNews(),
+        future: apiService.getRequest(Urls.allNewsUrl),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             List<ArticleModel> articleModel = snapshot.data ?? [];

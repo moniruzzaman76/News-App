@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/api_service/api_service.dart';
 import 'package:news_app/components/news_item_list.dart';
 
+import '../api_service/url.dart';
 import '../model/news_model.dart';
 
 class AllNewsScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _AllNewsScreenState extends State<AllNewsScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: FutureBuilder(
-        future:apiService.getAllNews(),
+        future:apiService.getRequest(Urls.allNewsUrl),
         builder: (context,snapshot){
           if(snapshot.hasData){
             List<ArticleModel> articleModel = snapshot.data??[];
